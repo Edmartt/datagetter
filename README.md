@@ -1,4 +1,4 @@
-#Datagetter
+# Datagetter
 
 Este script es el complemento del proyecto de prueba [rest-fut21](https://github.com/Edmartt/rest-fut21)
 
@@ -8,7 +8,7 @@ Este script es el complemento del proyecto de prueba [rest-fut21](https://github
 
     $ git clone https://github.com/Edmartt/rest-fut21.git
     $ cd rest-fut21/
-    $ pip install -r requierements.txt
+    $ pip install -r requirements.txt
     $ set MYSQL_HOST=127.0.0.1
     $ set MYSQL_USER=dev
     $ set MYSQL_PASSWORD=dev
@@ -20,7 +20,7 @@ Este script es el complemento del proyecto de prueba [rest-fut21](https://github
 
     $ git clone https://github.com/Edmartt/rest-fut21.git
     $ cd rest-fut21/
-    $ pip install -r requierements.txt
+    $ pip install -r requirements.txt
     $ export MYSQL_HOST=127.0.0.1
     $ export MYSQL_USER=dev
     $ export MYSQL_PASSWORD=dev
