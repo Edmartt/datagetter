@@ -1,12 +1,14 @@
 """Scrpit para extraer los datos de los jugadores de la API FUT21."""
 
 import requests
-from datagetter.database import Database  # La clase que tiene los metodos que permiten conectarnos a una bd en MYSQL
-from datagetter.players_data import insert_data
+from datagetter.players_data import Players
 
 
-def get_data(url="https://www.easports.com/fifa/ultimate-team/api/fut/item",
-             page=1):
+def get_data(url: str =
+             "https://www.easports.com/fifa/ultimate-team/api/fut/item",
+             page: int = 1) -> None:
+
+    players_data = Players()
 
     args = {'page': page} if page else {}
 
@@ -27,8 +29,9 @@ def get_data(url="https://www.easports.com/fifa/ultimate-team/api/fut/item",
         players_positions.append(i['position'])
         players_nations.append(i['nation']['name'])
         players_clubs.append(i['club']['name'])
-    insert_data(player_names, players_positions, players_nations,
-                players_clubs)
+
+    players_data.insert_data(player_names, players_positions,
+                             players_nations, players_clubs)
 
 # Una vez extraidos los datos de la primera pagina, se nos pregunta
 # si queremos continuar leyendo los datos de la siguiente pagina y guardarlos
@@ -37,6 +40,7 @@ def get_data(url="https://www.easports.com/fifa/ultimate-team/api/fut/item",
     page += 1
     if choice == 'y' and page <= 908:
         get_data(url, page)
+        return
 
 
 get_data()
