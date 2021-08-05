@@ -1,19 +1,23 @@
 from datagetter.database import Database
 
 
-def insert_data(names, positions, nations, clubs):
-    db_object = Database()
-    connection, cursor = db_object.create_connection()
-    query = '''INSERT INTO playersdata (name, position, nation, club)
-        VALUES(%s, %s, %s, %s)'''
+class Players:
 
-    try:
-        cursor.executemany(query, zip(names, positions, nations, clubs))
-        connection.commit()
-        print('Datos agregados a la base de datos')
+    def insert_data(self, names: list, positions: list,
+                    nations: list, clubs: list) -> None:
 
-    except Exception as ex:
-        print('No se han podido ingresar los datos por: ', ex)
+        connection, cursor = Database.create_connection()
+        query = '''INSERT INTO playersdata (name, position, nation, club)
+            VALUES(%s, %s, %s, %s)'''
 
-    finally:
-        connection.close()
+        try:
+            cursor.executemany(query, zip(names, positions, nations, clubs))
+            connection.commit()
+
+            print('Datos agregados a la base de datos')
+            return
+
+        except Exception as ex:
+            print('No se han podido ingresar los datos por: ', ex)
+        finally:
+            connection.close()
