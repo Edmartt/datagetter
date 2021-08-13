@@ -22,7 +22,7 @@ Este script es el complemento del proyecto de prueba [rest-fut21](https://github
     $ cd rest-fut21/
     $ pip install -r requirements.txt
     $ export MYSQL_HOST=127.0.0.1
-    $ export MYSQL_USER=nombre de usuario usado en el .env usado para las env vars de [rest-fut21](https://github.com/Edmartt/rest-fut21)
+    $ export MYSQL_USER=nombre de usuario usado en el .env usado para las env vars de rest-fut21
     $ export MYSQL_PASSWORD=password usado en el .env
     $ export MYSQL_DATABASE=nombre de la base de datos del .env
     $ export MYSQL_PORT=puerto usado en el .env
@@ -48,7 +48,8 @@ ejemplo:
 
     $ mariadb -u username --localhost=127.0.0.1 --port=puerto configurado en el .env -pmipassword
 
-O
-    $mariadb -u username --localhost=127.0.0.1 --port=puerto configurado en el .env -p (presionamos enter)
+O:
+
+    $ mariadb -u username --localhost=127.0.0.1 --port=puerto configurado en el .env -p (presionamos enter)
 
     Password: *********
