@@ -1,3 +1,4 @@
+import logging
 from datagetter.database import Database
 
 
@@ -18,6 +19,6 @@ class Players:
             return
 
         except Exception as ex:
-            print('No se han podido ingresar los datos por: ', ex)
+            logging.exception('Exception in: ')
         finally:
             connection.close()
