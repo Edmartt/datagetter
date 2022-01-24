@@ -1,7 +1,7 @@
 certifi==2021.5.30
 charset-normalizer==2.0.7
 colorama==0.4.4
-httpie==2.5.0
+httpie==3.0.1
 idna==3.2
 mysql-connector==2.2.9
 Pygments==2.10.0
