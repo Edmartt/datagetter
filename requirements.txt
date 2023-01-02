@@ -4,7 +4,7 @@ colorama==0.4.4
 httpie==3.1.0
 idna==3.3
 mysql-connector==2.2.9
-Pygments==2.10.0
+Pygments==2.14.0
 PySocks==1.7.1
 requests==2.26.0
 requests-toolbelt==0.9.1
