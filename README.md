@@ -73,7 +73,7 @@ Set a **.env** file for using before running following the **.env.example** file
     
     $ python3 script.py
   
-   The script will do a GET request to [Fifa Ultimate Team](https://futdb.app/api) API and will save the data in the rest-fut21 project container database. Every successful request it will ask if we want to continue and if we answer a **y** it will keep saving the data for every available page with data. If we type* ***n** the script will end of getting pages data and now we can use rest-fut21 making request according to docs in the readme.
+   The script will do a GET request to [Fifa Ultimate Team](https://futdb.app/api) API and will save the data in the rest-fut21 project container database. Every successful request it will ask if we want to continue and if we answer a **y** it will keep saving the data for every available page with data. If we type **n** the script will end of getting pages data and now we can use rest-fut21 making request according to docs in the readme.
 
 If you want to test the saved data just create a connection with the MariaDB/MySQL client installed on your local machine 
 
