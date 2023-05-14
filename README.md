@@ -4,8 +4,7 @@ This script fetch data from fifa fut21 api and complementary for using [rest-fut
 
 ## Install:
 
-### On Windows:
-
+### On Windows
 ```git clone https://github.com/Edmartt/datagetter.git
 ```
 
@@ -31,7 +30,7 @@ This script fetch data from fifa fut21 api and complementary for using [rest-fut
 ```
 
 
-### On Linux:
+### On Linux
 
     ```git clone https://github.com/Edmartt/datagetter.git
     ```
@@ -91,6 +90,6 @@ i.e:
 
 Or:
 
-    $ mariadb -u username -h 0.0.0.0 -P <forwarded-port-from-rest-fut21> -p (presionamos enter)
+    $ mariadb -u username -h 0.0.0.0 -P <forwarded-port-from-rest-fut21> -p (press enter)
 
     Password: *********
