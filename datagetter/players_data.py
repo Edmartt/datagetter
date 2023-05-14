@@ -7,7 +7,8 @@ class Players:
     def insert_data(self, names: list, positions: list,
                     nations: list, clubs: list) -> None:
 
-        connection, cursor = Database.create_connection()
+        connector = Database()
+        connection, cursor = connector.create_connection()
         query = '''INSERT INTO playersdata (name, position, nation, club)
             VALUES(%s, %s, %s, %s)'''
 
