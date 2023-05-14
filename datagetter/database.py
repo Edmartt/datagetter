@@ -1,28 +1,31 @@
-from os import environ
 import mysql.connector
+import os
 
 
 class Database():
-    __host = environ.get('MYSQL_HOST')
-    __user = environ.get('MYSQL_USER')
-    __password = environ.get('MYSQL_PASSWORD')
-    __database = environ.get('MYSQL_DATABASE')
-    __port = environ.get('MYSQL_PORT')
 
-    @staticmethod
-    def create_connection() -> mysql.connector.MySQLConnection:
+    def __init__(self) -> None:
+        self.host = os.environ.get('MYSQL_HOST')
+        self.user = os.environ.get('MYSQL_USER')
+        self.password = os.environ.get('MYSQL_PASSWORD')
+        self.database = os.environ.get('MYSQL_DATABASE')
+        self.port = os.environ.get('MYSQL_PORT')
+
+    def create_connection(self) -> tuple:
         '''Creates database connection.
 
         Takes the class variables as parameters to return a
         successful database connection.
         '''
-        connection = mysql.connector.connect(
-            host=Database.__host,
-            user=Database.__user,
-            password=Database.__password,
-            database=Database.__database,
-            port=Database.__port
-            )
-        cursor = connection.cursor(prepared=True)
-
-        return connection, cursor
+        try:
+            connection = mysql.connector.connect(
+                    host=self.host,
+                    user=self.user,
+                    password=self.password,
+                    database=self.database,
+                    port=self.port
+                    )
+            cursor = connection.cursor(prepared=True)
+            return connection, cursor
+        except Exception as ex:
+            return (ex,)
