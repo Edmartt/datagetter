@@ -2,7 +2,7 @@ certifi==2022.12.7
 charset-normalizer==2.0.12
 colorama==0.4.6
 httpie==3.2.1
-idna==3.3
+idna==3.4
 mysql-connector==2.2.9
 Pygments==2.14.0
 PySocks==1.7.1
